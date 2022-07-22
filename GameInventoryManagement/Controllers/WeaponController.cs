@@ -1,5 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using GameInventoryManagement.Models;
+﻿using GameInventoryManagement.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -69,49 +68,6 @@ namespace GameInventoryManagement.Controllers
             
         }
 
-        [HttpGet("buy/{wid}")]
-        public async Task<ActionResult<string>> BuyWeapon(int wid, string price)
-        {
-            var uid = decode();
-            var amount = Convert.ToInt32(price);
-            var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == wid);
-            if (dbWeapon != null)
-            {
-                if (amount == dbWeapon.Price)
-                {
-                    _context.InventoryTables.Add(new InventoryTable
-                    {
-                        UserId = uid,
-                        WeaponId = wid
-                    });
-                    await _context.SaveChangesAsync();
-                    return Ok("Purchased Successfully");
-                }
-                else if (amount > dbWeapon.Price)
-                {
-                    return BadRequest("Enter correct amount");
-                }
-                else
-                {
-                    return BadRequest("Amount is Not sufficient");
-                }
-            }
-            else
-            {
-                return BadRequest("Weapon not found");
-            }
-        }
-
-        private int decode()
-        {
-            var handler = new JwtSecurityTokenHandler();
-            string authHeader = Request.Headers["Authorization"];
-            authHeader = authHeader.Replace("bearer ", "");
-            var jsonToken = handler.ReadToken(authHeader);
-            var tokenS = handler.ReadToken(authHeader) as JwtSecurityToken;
-            var id = tokenS.Claims.First(claim => claim.Type == "Id").Value;
-            return Convert.ToInt32(id);
-        }
 
     }
 }

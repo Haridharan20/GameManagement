@@ -58,35 +58,7 @@ namespace GameInventoryManagement.Controllers
             }
             return BadRequest("User Not Found");
         }
-
-        [HttpGet]
-        [Route("viewdata"), Authorize(Roles = "1")]
-        public async Task<ActionResult<List<User>>> GetAllDetails()
-        {
-           
-                return Ok(await _context.Users.ToListAsync());
-        }
-
-        [HttpPut]
-        [Route("edit/{id}"), Authorize(Roles = "1")]
-        public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] string isAdmin)
-        {
-                var val = Convert.ToInt16(isAdmin);
-                if (val == 0 || val == 1)
-                {
-                    var dbUser = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
-                    if (dbUser != null)
-                    {
-                        dbUser.Isadmin = Convert.ToSByte(val);
-                        await _context.SaveChangesAsync();
-                        return Ok("Update Successfully");
-                    }
-                return BadRequest("User Not Found");
-                }
-                return BadRequest("Enter only 0 or 1");
-
-        }
-
+       
         private string CreateToken(User user, string role)
         {
             List<Claim> claims = new List<Claim>

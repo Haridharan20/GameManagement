@@ -16,9 +16,9 @@ namespace GameInventoryManagement.Models
         {
         }
 
+        public virtual DbSet<InventoryTable> InventoryTables { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<Weapon> Weapons { get; set; } = null!;
-        public virtual DbSet<InventoryTable> InventoryTables { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,6 +33,32 @@ namespace GameInventoryManagement.Models
         {
             modelBuilder.UseCollation("utf8mb4_0900_ai_ci")
                 .HasCharSet("utf8mb4");
+
+            modelBuilder.Entity<InventoryTable>(entity =>
+            {
+                entity.HasKey(e => e.InventoryId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("inventory_table");
+
+                entity.HasIndex(e => e.UserId, "UserId_idx");
+
+                entity.HasIndex(e => e.WeaponId, "WeaponId_idx");
+
+                entity.Property(e => e.InventoryId).HasColumnName("inventoryId");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.InventoryTables)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("UserId");
+
+                entity.HasOne(d => d.Weapon)
+                    .WithMany(p => p.InventoryTables)
+                    .HasForeignKey(d => d.WeaponId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("WeaponId");
+            });
 
             modelBuilder.Entity<User>(entity =>
             {
@@ -65,22 +91,7 @@ namespace GameInventoryManagement.Models
                     .HasMaxLength(45)
                     .HasColumnName("name");
 
-                entity.Property(e => e.Price)
-                    .HasColumnName("price");
-            });
-
-            modelBuilder.Entity<InventoryTable>(entity =>
-            {
-                entity.HasKey(e => e.InventoryId)
-                    .HasName("PRIMARY");
-
-                entity.ToTable("inventory_table");
-
-                entity.HasIndex(e => e.UserId, "UserId_idx");
-
-                entity.HasIndex(e => e.WeaponId, "WeaponId_idx");
-
-                entity.Property(e => e.InventoryId).HasColumnName("inventoryId");
+                entity.Property(e => e.Price).HasColumnName("price");
             });
 
             OnModelCreatingPartial(modelBuilder);
