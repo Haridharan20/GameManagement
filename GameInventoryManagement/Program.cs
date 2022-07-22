@@ -11,7 +11,7 @@ builder.Services.AddDbContext<gamemanagementContext>(options =>
 {
     // options. (builder.Configuration.GetConnectionString("Mysql"));
     object value = options.UseMySql(connectionString, serverVersion);
-}); ;
+});
 // Add services to the container.
 
 builder.Services.AddControllers();

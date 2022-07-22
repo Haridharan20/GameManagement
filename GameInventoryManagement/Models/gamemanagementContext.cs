@@ -35,7 +35,7 @@ namespace GameInventoryManagement.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("user");
+                entity.ToTable("users");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
@@ -50,13 +50,13 @@ namespace GameInventoryManagement.Models
                     .HasColumnName("name");
 
                 entity.Property(e => e.Password)
-                    .HasMaxLength(45)
+                    .HasMaxLength(100)
                     .HasColumnName("password");
             });
 
             modelBuilder.Entity<Weapon>(entity =>
             {
-                entity.ToTable("weapon");
+                entity.ToTable("weapons");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 

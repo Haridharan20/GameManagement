@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ll5wUYTZgg17UDsJ9JPl1DD0h5mxEOCi4UPbJ0WbwfUwWy0Z3q+/Ct6jRaBkX53Bh0gaNE0J5gQfpUWFJjRyJA==",
+  "dgSpecHash": "AQV6z6d40MR5PWfF89XEXwu1TVT9oZMIaMWASZuUU03sWohUMFWiMmawZ2/DDoBsk1EisaPimSeLOm52ZNHqYQ==",
   "success": true,
-  "projectFilePath": "D:\\DotNetTraining\\Project\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj",
+  "projectFilePath": "D:\\DotNetTraining\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\VC\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\VC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\VC\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",
     "C:\\Users\\VC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.7\\microsoft.entityframeworkcore.abstractions.6.0.7.nupkg.sha512",

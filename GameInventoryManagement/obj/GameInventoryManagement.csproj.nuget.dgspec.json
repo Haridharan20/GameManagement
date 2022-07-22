@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DotNetTraining\\Project\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj": {}
+    "D:\\DotNetTraining\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj": {}
   },
   "projects": {
-    "D:\\DotNetTraining\\Project\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj": {
+    "D:\\DotNetTraining\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DotNetTraining\\Project\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj",
+        "projectUniqueName": "D:\\DotNetTraining\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj",
         "projectName": "GameInventoryManagement",
-        "projectPath": "D:\\DotNetTraining\\Project\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj",
+        "projectPath": "D:\\DotNetTraining\\GameInventoryManagement\\GameInventoryManagement\\GameInventoryManagement.csproj",
         "packagesPath": "C:\\Users\\VC\\.nuget\\packages\\",
-        "outputPath": "D:\\DotNetTraining\\Project\\GameInventoryManagement\\GameInventoryManagement\\obj\\",
+        "outputPath": "D:\\DotNetTraining\\GameInventoryManagement\\GameInventoryManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
