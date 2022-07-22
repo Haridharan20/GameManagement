@@ -1,7 +1,11 @@
-﻿using GameInventoryManagement.Models;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using GameInventoryManagement.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using bcrypt = BCrypt.Net.BCrypt;
 
 namespace GameInventoryManagement.Controllers
@@ -10,11 +14,13 @@ namespace GameInventoryManagement.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly IConfiguration _configuration;
         private readonly gamemanagementContext _context;
 
-        public AuthController(gamemanagementContext context)
+        public AuthController(IConfiguration configuration,gamemanagementContext context)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -36,23 +42,14 @@ namespace GameInventoryManagement.Controllers
         [Route("login")]
         public async Task<ActionResult<User>> Login([FromBody] Login user)
         {
-            string isAdmin = null;
             var dbUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
             if (dbUser != null)
             {
                 if (bcrypt.Verify(user.Password,dbUser.Password))
                 {
-                    switch (dbUser.Isadmin)
-                    {
-                        case 0:
-                            isAdmin = "user";
-                            break;
-                        case 1:
-                            isAdmin = "admin";
-                            break;
-
-                    }
-                    return Ok(isAdmin);
+                    string role = dbUser.Isadmin.ToString();
+                    string token = CreateToken(dbUser, role);
+                    return Ok(token);
                 }
                 else
                 {
@@ -63,26 +60,17 @@ namespace GameInventoryManagement.Controllers
         }
 
         [HttpGet]
-        [Route("viewdata")]
+        [Route("viewdata"), Authorize(Roles = "1")]
         public async Task<ActionResult<List<User>>> GetAllDetails()
         {
-            if (isAuthorize())
-            {
+           
                 return Ok(await _context.Users.ToListAsync());
-            }
-            else
-            {
-                return BadRequest("Not Allowed");
-            }
         }
 
         [HttpPut]
-        [Route("edit/{id}")]
+        [Route("edit/{id}"), Authorize(Roles = "1")]
         public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] string isAdmin)
         {
-           
-            if (isAuthorize())
-            {
                 var val = Convert.ToInt16(isAdmin);
                 if (val == 0 || val == 1)
                 {
@@ -97,33 +85,30 @@ namespace GameInventoryManagement.Controllers
                 }
                 return BadRequest("Enter only 0 or 1");
 
-            }
-            else
-            {
-                return Unauthorized();
-            }
         }
 
-        private bool isAuthorize()
+        private string CreateToken(User user, string role)
         {
-            var re = Request;
-            var headers = re.Headers;
-            if (headers.ContainsKey("Authorization"))
+            List<Claim> claims = new List<Claim>
             {
-                var token = headers["Authorization"];
-                if (token == "admin")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
+                new Claim("Email", user.Email),
+                new Claim("Id",user.Id.ToString()),
+                new Claim(ClaimTypes.Role,role)
+            };
+
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
+                _configuration.GetSection("AppSettings:Token").Value));
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            var token = new JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.Now.AddDays(1),
+                signingCredentials: creds);
+
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return jwt;
         }
     }
 }

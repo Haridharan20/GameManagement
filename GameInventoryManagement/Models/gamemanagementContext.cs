@@ -18,6 +18,7 @@ namespace GameInventoryManagement.Models
 
         public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<Weapon> Weapons { get; set; } = null!;
+        public virtual DbSet<InventoryTable> InventoryTables { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -65,8 +66,21 @@ namespace GameInventoryManagement.Models
                     .HasColumnName("name");
 
                 entity.Property(e => e.Price)
-                    .HasMaxLength(45)
                     .HasColumnName("price");
+            });
+
+            modelBuilder.Entity<InventoryTable>(entity =>
+            {
+                entity.HasKey(e => e.InventoryId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("inventory_table");
+
+                entity.HasIndex(e => e.UserId, "UserId_idx");
+
+                entity.HasIndex(e => e.WeaponId, "WeaponId_idx");
+
+                entity.Property(e => e.InventoryId).HasColumnName("inventoryId");
             });
 
             OnModelCreatingPartial(modelBuilder);

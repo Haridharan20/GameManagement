@@ -69,3 +69,14 @@ D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\obj\Debug\net6
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\obj\Debug\net6.0\GameInventoryManagement.genruntimeconfig.cache
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\obj\Debug\net6.0\ref\GameInventoryManagement.dll
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\BCrypt.Net-Next.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Scrutor.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

@@ -1,4 +1,6 @@
-﻿using GameInventoryManagement.Models;
+﻿using System.IdentityModel.Tokens.Jwt;
+using GameInventoryManagement.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,19 +19,13 @@ namespace GameInventoryManagement.Controllers
         }
 
         [HttpPost]
-        [Route("add")]
+        [Route("add"),Authorize(Roles = "1")]
         public async Task<ActionResult<Weapon>> AddWeapon([FromBody] Weapon weapon)
         {
-           if(isAuthorize())
-            {
+           
                 _context.Weapons.Add(weapon);
                 await _context.SaveChangesAsync();
                 return Ok("Weapon Created Successfully");
-            }
-            else
-            {
-                return Unauthorized();
-            }
         }
 
         [HttpGet]
@@ -41,11 +37,10 @@ namespace GameInventoryManagement.Controllers
         }
 
         [HttpPut]
-        [Route("edit/{id}")]
+        [Route("edit/{id}"), Authorize(Roles = "1")]
         public async Task<ActionResult<Weapon>> UpdateWeapon(int id, [FromBody] Weapon weapon)
         {
-            if(isAuthorize())
-            {
+            
                 var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == id);
                 if(dbWeapon != null)
                 {
@@ -55,19 +50,13 @@ namespace GameInventoryManagement.Controllers
                     return Ok("Update Successfully");
                 }
                 return BadRequest("Weapon Not Found");
-            }
-            else
-            {
-                return Unauthorized();
-            }
         }
 
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("delete/{id}"), Authorize(Roles = "1")]
         public async Task<ActionResult<Weapon>> DeleteWeapon(int id)
         {
-            if (isAuthorize())
-            {
+            
                 var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == id);
                 if (dbWeapon != null)
                 {
@@ -76,35 +65,53 @@ namespace GameInventoryManagement.Controllers
                     return Ok("Weapon Deleted Successfully");
                 }
                 return BadRequest("Weapon Not Found");
-            }
-            else
-            {
-                return Unauthorized();
-            }
+              return Unauthorized();
+            
         }
 
-        private bool isAuthorize()
+        [HttpGet("buy/{wid}")]
+        public async Task<ActionResult<string>> BuyWeapon(int wid, string price)
         {
-            var re = Request;
-            var headers = re.Headers;
-            if (headers.ContainsKey("Authorization"))
+            var uid = decode();
+            var amount = Convert.ToInt32(price);
+            var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == wid);
+            if (dbWeapon != null)
             {
-                var token = headers["Authorization"];
-                if (token == "admin")
+                if (amount == dbWeapon.Price)
                 {
-                    return true;
+                    _context.InventoryTables.Add(new InventoryTable
+                    {
+                        UserId = uid,
+                        WeaponId = wid
+                    });
+                    await _context.SaveChangesAsync();
+                    return Ok("Purchased Successfully");
+                }
+                else if (amount > dbWeapon.Price)
+                {
+                    return BadRequest("Enter correct amount");
                 }
                 else
                 {
-                    return false;
+                    return BadRequest("Amount is Not sufficient");
                 }
             }
             else
             {
-                return false;
+                return BadRequest("Weapon not found");
             }
         }
 
+        private int decode()
+        {
+            var handler = new JwtSecurityTokenHandler();
+            string authHeader = Request.Headers["Authorization"];
+            authHeader = authHeader.Replace("bearer ", "");
+            var jsonToken = handler.ReadToken(authHeader);
+            var tokenS = handler.ReadToken(authHeader) as JwtSecurityToken;
+            var id = tokenS.Claims.First(claim => claim.Type == "Id").Value;
+            return Convert.ToInt32(id);
+        }
 
     }
 }
