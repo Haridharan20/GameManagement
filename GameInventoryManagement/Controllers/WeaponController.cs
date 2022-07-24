@@ -24,7 +24,7 @@ namespace GameInventoryManagement.Controllers
            
                 _context.Weapons.Add(weapon);
                 await _context.SaveChangesAsync();
-                return Ok("Weapon Created Successfully");
+                return Ok(new { message = "Weapon Created Successfully" });
         }
 
         [HttpGet]
@@ -76,7 +76,7 @@ namespace GameInventoryManagement.Controllers
                 {
                     _context.Weapons.Remove(dbWeapon);
                     await _context.SaveChangesAsync();
-                    return Ok("Weapon Deleted Successfully");
+                    return Ok(new { message = "Weapon Deleted Successfully" });
                 }
                 return BadRequest("Weapon Not Found");
               return Unauthorized();

@@ -11,13 +11,19 @@ namespace GameInventoryManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("myAllowOrigins")]
     public class UserController : ControllerBase
     {
         private readonly gamemanagementContext _context;
         public UserController(gamemanagementContext context)
         {
             _context = context;
+        }
+
+        [HttpGet]
+        [Route("getUsers")]
+        public async Task<ActionResult<List<User>>> GetAllUsers()
+        {
+            return await _context.Users.ToListAsync();
         }
 
         [HttpGet]
@@ -35,23 +41,21 @@ namespace GameInventoryManagement.Controllers
                             Weapon.Price
                         };
             return Ok(new {message=query});
-        }
-
-           
+        }  
 
         [HttpPut]
         [Route("edit/{id}"), Authorize(Roles = "1")]
-        public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] string isAdmin)
+        public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] int isAdmin)
         {
-            var val = Convert.ToInt16(isAdmin);
-            if (val == 0 || val == 1)
+            //var val = Convert.ToInt16(isAdmin);
+            if (isAdmin == 0 || isAdmin == 1)
             {
                 var dbUser = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
                 if (dbUser != null)
                 {
-                    dbUser.Isadmin = Convert.ToSByte(val);
+                    dbUser.Isadmin = Convert.ToSByte(isAdmin);
                     await _context.SaveChangesAsync();
-                    return Ok("Update Successfully");
+                    return Ok(new { message = "Update Successfully" });
                 }
                 return BadRequest("User Not Found");
             }

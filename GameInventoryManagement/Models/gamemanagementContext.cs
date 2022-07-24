@@ -50,13 +50,11 @@ namespace GameInventoryManagement.Models
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.InventoryTables)
                     .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("UserId");
 
                 entity.HasOne(d => d.Weapon)
                     .WithMany(p => p.InventoryTables)
                     .HasForeignKey(d => d.WeaponId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("WeaponId");
             });
 
