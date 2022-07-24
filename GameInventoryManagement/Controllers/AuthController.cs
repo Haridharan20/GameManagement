@@ -30,17 +30,17 @@ namespace GameInventoryManagement.Controllers
             var dbUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
             if(dbUser != null)
             {
-                return BadRequest("User Already exists");
+                return BadRequest(new { message = "User Already exists" } );
             }
             user.Password = bcrypt.HashPassword(user.Password,12);
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-            return Ok("User Created Successfully");
+            return Ok(new {message= "User Created Successfully" });
         }
 
         [HttpPost]
         [Route("login")]
-        public async Task<ActionResult<User>> Login([FromBody] Login user)
+        public async Task<ActionResult<string>> Login([FromBody] Login user)
         {
             var dbUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
             if (dbUser != null)
@@ -49,14 +49,14 @@ namespace GameInventoryManagement.Controllers
                 {
                     string role = dbUser.Isadmin.ToString();
                     string token = CreateToken(dbUser, role);
-                    return Ok(token);
+                    return Ok(new { message = token ,UserId=dbUser.Id});
                 }
                 else
                 {
-                    return BadRequest("Password is Wrong");
+                    return Ok(new { Message = "Passwornd is wrong" }); 
                 }
             }
-            return BadRequest("User Not Found");
+            return Ok(new { Message = "Not Found" }); ;
         }
        
         private string CreateToken(User user, string role)

@@ -1,6 +1,8 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using GameInventoryManagement.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +11,7 @@ namespace GameInventoryManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("myAllowOrigins")]
     public class UserController : ControllerBase
     {
         private readonly gamemanagementContext _context;
@@ -18,13 +21,23 @@ namespace GameInventoryManagement.Controllers
         }
 
         [HttpGet]
-        [Route("viewdetails")]
-        public async Task<ActionResult<List<User>>> GetAllDetails()
+        [Route("myWeapons/{id}")]
+        public async Task<ActionResult<List<Weapon>>> GetAllDetails(int id)
         {
-            var uid = decode();
-            var dbData = _context.InventoryTables.Where(x => x.UserId == uid);
-            return Ok(await dbData.ToListAsync());
+            var query = from Weapon in _context.Weapons
+                        join InventoryTable in _context.InventoryTables on Weapon.Id equals InventoryTable.WeaponId 
+                        join User in _context.Users on InventoryTable.UserId equals User.Id 
+                        where User.Id==id
+                        select new
+                        {
+                            Weapon.Id,
+                            Weapon.Name,
+                            Weapon.Price
+                        };
+            return Ok(new {message=query});
         }
+
+           
 
         [HttpPut]
         [Route("edit/{id}"), Authorize(Roles = "1")]
@@ -62,7 +75,7 @@ namespace GameInventoryManagement.Controllers
                         WeaponId = wid
                     });
                     await _context.SaveChangesAsync();
-                    return Ok("Purchased Successfully");
+                    return Ok(new {message="Purchased Successfully" });
                 }
                 else if (amount > dbWeapon.Price)
                 {
@@ -89,5 +102,6 @@ namespace GameInventoryManagement.Controllers
             var id = tokenS.Claims.First(claim => claim.Type == "Id").Value;
             return Convert.ToInt32(id);
         }
+
     }
 }

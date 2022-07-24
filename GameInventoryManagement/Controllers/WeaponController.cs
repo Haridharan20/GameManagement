@@ -32,11 +32,26 @@ namespace GameInventoryManagement.Controllers
         public async Task<ActionResult<List<Weapon>>> GetWeapons()
         {
 
-            return Ok();
+            return Ok(await _context.Weapons.ToListAsync());
+        }
+
+        [HttpGet]
+        [Route("weapon/{id}")]
+        public async Task<ActionResult<List<Weapon>>> GetWeapons(int id)
+        {
+
+            var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == id);
+            if (dbWeapon != null)
+            {
+               
+                return Ok(dbWeapon);
+            }
+            return BadRequest("Weapon Not Found");
         }
 
         [HttpPut]
         [Route("edit/{id}"), Authorize(Roles = "1")]
+        
         public async Task<ActionResult<Weapon>> UpdateWeapon(int id, [FromBody] Weapon weapon)
         {
             
@@ -46,9 +61,9 @@ namespace GameInventoryManagement.Controllers
                     dbWeapon.Name=weapon.Name;
                     dbWeapon.Price = weapon.Price;
                     await _context.SaveChangesAsync();
-                    return Ok("Update Successfully");
+                    return Ok(new { message="Update Successfully" });
                 }
-                return BadRequest("Weapon Not Found");
+                return BadRequest(new { message = "Weapon Not Found" });
         }
 
         [HttpDelete]
