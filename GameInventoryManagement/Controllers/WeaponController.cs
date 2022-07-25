@@ -1,4 +1,5 @@
 ﻿using GameInventoryManagement.Models;
+using GameInventoryManagement.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,77 +11,68 @@ namespace GameInventoryManagement.Controllers
     [ApiController]
     public class WeaponController : ControllerBase
     {
-        private readonly gamemanagementContext _context;
+        private readonly WeaponService _weaponService;
 
-        public WeaponController(gamemanagementContext context)
+        public WeaponController(WeaponService weaponService)
         {
-            _context = context;
+            _weaponService = weaponService;
         }
 
         [HttpPost]
-        [Route("add"),Authorize(Roles = "1")]
-        public async Task<ActionResult<Weapon>> AddWeapon([FromBody] Weapon weapon)
+        [Route("add"), Authorize(Roles = "1")]
+        public async Task<ActionResult<Weapon>> Add([FromBody] Weapon weapon)
         {
-           
-                _context.Weapons.Add(weapon);
-                await _context.SaveChangesAsync();
-                return Ok(new { message = "Weapon Created Successfully" });
+
+            return Ok(_weaponService.AddWeapon(weapon));
         }
 
         [HttpGet]
-        [ Route("weapons")]
-        public async Task<ActionResult<List<Weapon>>> GetWeapons()
+        [Route("weapons")]
+        public async Task<ActionResult<List<Weapon>>> GetAll()
         {
 
-            return Ok(await _context.Weapons.ToListAsync());
+            return Ok(_weaponService.GetAllWeapons());
         }
 
         [HttpGet]
         [Route("weapon/{id}")]
-        public async Task<ActionResult<List<Weapon>>> GetWeapons(int id)
+        public async Task<IActionResult> Get(int id)
         {
 
-            var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == id);
+            var dbWeapon = await _weaponService.GetWeapon(id);
             if (dbWeapon != null)
             {
-               
                 return Ok(dbWeapon);
             }
-            return BadRequest(new {message= "Weapon Not Found" });
+            return BadRequest(new { message = "Weapon Not Found" });
         }
-
         [HttpPut]
         [Route("edit/{id}"), Authorize(Roles = "1")]
-        
-        public async Task<ActionResult<Weapon>> UpdateWeapon(int id, [FromBody] Weapon weapon)
+        public async Task<ActionResult<Weapon>> Update(int id, [FromBody] Weapon weapon)
         {
-            
-                var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == id);
-                if(dbWeapon != null)
-                {
-                    dbWeapon.Name=weapon.Name;
-                    dbWeapon.Price = weapon.Price;
-                    await _context.SaveChangesAsync();
-                    return Ok(new { message="Update Successfully" });
-                }
-                return BadRequest(new { message = "Weapon Not Found" });
+
+            var dbWeapon = await _weaponService.UpdateWeapon(id, weapon);
+            if (dbWeapon != null)
+            {
+
+                return Ok(dbWeapon);
+            }
+            return BadRequest(new { message = "Weapon Not Found" });
         }
 
         [HttpDelete]
         [Route("delete/{id}"), Authorize(Roles = "1")]
-        public async Task<ActionResult<Weapon>> DeleteWeapon(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            
-                var dbWeapon = await _context.Weapons.FirstOrDefaultAsync(x => x.Id == id);
-                if (dbWeapon != null)
-                {
-                    _context.Weapons.Remove(dbWeapon);
-                    await _context.SaveChangesAsync();
-                    return Ok(new { message = "Weapon Deleted Successfully" });
-                }
-                return BadRequest(new {message= "Weapon Not Found" });
-              return Unauthorized();
-            
+
+            var dbWeapon = await _weaponService.DeleteWeapon(id);
+            if (dbWeapon != null)
+            {
+
+                return Ok(dbWeapon);
+            }
+            return BadRequest(new { message = "Weapon Not Found" });
+
         }
 
 

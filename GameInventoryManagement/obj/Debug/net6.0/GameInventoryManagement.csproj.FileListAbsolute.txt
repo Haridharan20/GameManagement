@@ -80,3 +80,5 @@ D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Castle.Core.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Moq.dll
