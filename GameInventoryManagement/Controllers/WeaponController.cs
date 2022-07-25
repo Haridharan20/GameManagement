@@ -46,7 +46,7 @@ namespace GameInventoryManagement.Controllers
                
                 return Ok(dbWeapon);
             }
-            return BadRequest("Weapon Not Found");
+            return BadRequest(new {message= "Weapon Not Found" });
         }
 
         [HttpPut]
@@ -78,7 +78,7 @@ namespace GameInventoryManagement.Controllers
                     await _context.SaveChangesAsync();
                     return Ok(new { message = "Weapon Deleted Successfully" });
                 }
-                return BadRequest("Weapon Not Found");
+                return BadRequest(new {message= "Weapon Not Found" });
               return Unauthorized();
             
         }

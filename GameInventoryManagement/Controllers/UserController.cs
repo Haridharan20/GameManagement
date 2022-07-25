@@ -57,9 +57,9 @@ namespace GameInventoryManagement.Controllers
                     await _context.SaveChangesAsync();
                     return Ok(new { message = "Update Successfully" });
                 }
-                return BadRequest("User Not Found");
+                return BadRequest(new {message= "User Not Found" });
             }
-            return BadRequest("Enter only 0 or 1");
+            return BadRequest(new {message= "Enter only 0 or 1" });
 
         }
 
@@ -83,11 +83,11 @@ namespace GameInventoryManagement.Controllers
                 }
                 else if (amount > dbWeapon.Price)
                 {
-                    return BadRequest("Enter correct amount");
+                    return BadRequest(new {message= "Enter correct amount" });
                 }
                 else
                 {
-                    return BadRequest("Amount is Not sufficient");
+                    return BadRequest(new {message= "Amount is Not sufficient" });
                 }
             }
             else

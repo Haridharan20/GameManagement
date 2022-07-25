@@ -53,10 +53,10 @@ namespace GameInventoryManagement.Controllers
                 }
                 else
                 {
-                    return Ok(new { Message = "Passwornd is wrong" }); 
+                    return BadRequest(new { message = "Password is wrong" }); 
                 }
             }
-            return Ok(new { Message = "Not Found" }); ;
+            return BadRequest(new { message = "Not Found" }); ;
         }
        
         private string CreateToken(User user, string role)
