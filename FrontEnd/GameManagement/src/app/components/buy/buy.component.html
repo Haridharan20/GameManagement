@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="detail col-12 offset-md-4 col-md-4">
+    <h4>Weapon Details</h4>
+    <div class="mb-3">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        [value]="weapon?.name"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        id="price"
+        [value]="weapon?.price"
+        class="form-control"
+      />
+    </div>
+    <button class="btn btn-primary w-100" (click)="onBuy(weapon.price)">
+      Buy
+    </button>
+  </div>
+</div>

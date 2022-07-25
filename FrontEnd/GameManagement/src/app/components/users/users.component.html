@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div *ngIf="service.isLoading | async" class="loading">
+    <app-spinner-component></app-spinner-component>
+  </div>
+  <table
+    class="table border table-striped"
+    *ngIf="!(service.isLoading | async)"
+  >
+    <thead>
+      <tr>
+        <th scope="col">S.NO</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col" class="w-25">Is Admin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td class="d-flex justify-content-between">
+          <button
+            class="d-flex btn btn-primary"
+            (click)="onChange(user.id, user.isadmin)"
+          >
+            {{ user.isadmin == 1 ? "Make User" : "Make Admin" }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

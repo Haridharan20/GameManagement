@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark fw-bold bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Game Management</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-md-3">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li
+          class="nav-item mx-md-3"
+          *ngIf="service.loggedIn() && service.isAdmin()"
+        >
+          <a class="nav-link" routerLink="/users" routerLinkActive="active">
+            Users
+          </a>
+        </li>
+        <li class="nav-item mx-md-3" *ngIf="!service.loggedIn()">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active"
+            >Login</a
+          >
+        </li>
+
+        <li class="nav-item mx-md-3" *ngIf="service.loggedIn()">
+          <a class="nav-link" routerLink="/myweapons" routerLinkActive="active">
+            My Weapons
+          </a>
+        </li>
+
+        <li
+          class="nav-item mx-md-3"
+          *ngIf="service.loggedIn() && service.isAdmin()"
+        >
+          <a class="nav-link" routerLink="/create" routerLinkActive="active">
+            Create Weapon
+          </a>
+        </li>
+
+        <li class="nav-item mx-md-3" *ngIf="service.loggedIn()">
+          <a
+            class="nav-link"
+            [style]="{ cursor: 'pointer' }"
+            (click)="service.logOut()"
+            >Logout</a
+          >
+        </li>
+
+        <li class="nav-item mx-md-3" *ngIf="service.loggedIn()">
+          <a class="nav-link active">
+            {{ service.userName | async }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

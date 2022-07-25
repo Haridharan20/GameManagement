@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <div *ngIf="service.isLoading | async" class="loading">
+    <app-spinner-component></app-spinner-component>
+  </div>
+  <div
+    class="detail col-12 offset-md-4 col-md-4"
+    *ngIf="!(service.isLoading | async)"
+  >
+    <h4>Weapon Details</h4>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          [(ngModel)]="name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="price">Price</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          class="form-control"
+          [(ngModel)]="price"
+        />
+      </div>
+      <button class="btn btn-primary w-100" type="submit">Edit</button>
+    </form>
+  </div>
+</div>

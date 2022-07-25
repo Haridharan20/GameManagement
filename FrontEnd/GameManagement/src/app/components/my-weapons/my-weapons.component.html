@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div *ngIf="service.isLoading | async" class="loading">
+    <app-spinner-component></app-spinner-component>
+  </div>
+  <table
+    class="table border table-striped"
+    *ngIf="!(service.isLoading | async)"
+  >
+    <thead>
+      <tr>
+        <th scope="col">S.NO</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let weapon of myWeapons; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ weapon.name }}</td>
+        <td>{{ weapon.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div *ngIf="service.isLoading | async" class="loading">
+    <app-spinner-component></app-spinner-component>
+  </div>
+  <table
+    class="table border table-striped"
+    *ngIf="!(service.isLoading | async)"
+  >
+    <thead>
+      <tr>
+        <th scope="col">S.NO</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col" class="w-25">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let weapon of weapons; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ weapon.name }}</td>
+        <td>{{ weapon.price }}</td>
+        <td class="d-flex justify-content-between">
+          <button class="d-flex btn btn-primary" (click)="onBuy(weapon.id)">
+            Buy
+          </button>
+          <ng-container *ngIf="service.isAdmin()">
+            <button class="d-flex btn btn-warning" (click)="onEdit(weapon.id)">
+              Edit
+            </button>
+            <button class="d-flex btn btn-danger" (click)="onDelete(weapon.id)">
+              Delete
+            </button>
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
