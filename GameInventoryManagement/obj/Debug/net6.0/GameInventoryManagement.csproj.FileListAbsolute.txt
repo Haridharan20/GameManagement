@@ -82,3 +82,12 @@ D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Castle.Core.dll
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Moq.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\bin\Debug\net6.0\Serilog.Sinks.File.dll

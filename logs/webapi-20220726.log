@@ -1,0 +1,29 @@
+[2022-07-26 01:58:16.636 +05:30  INF]  User profile is available. Using 'C:\Users\VC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-07-26 01:58:16.996 +05:30  INF]  Now listening on: https://localhost:7148
+[2022-07-26 01:58:16.996 +05:30  INF]  Now listening on: http://localhost:5148
+[2022-07-26 01:58:16.999 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-07-26 01:58:17.000 +05:30  INF]  Hosting environment: Development
+[2022-07-26 01:58:17.000 +05:30  INF]  Content root path: D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\
+[2022-07-26 01:58:17.472 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - -
+[2022-07-26 01:58:17.969 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - - - 200 - text/html;charset=utf-8 497.0476ms
+[2022-07-26 01:58:18.000 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - -
+[2022-07-26 01:58:18.006 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 5.5317ms
+[2022-07-26 01:58:18.023 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - -
+[2022-07-26 01:58:18.101 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 77.0467ms
+[2022-07-26 01:58:18.215 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - -
+[2022-07-26 01:58:18.484 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 269.3028ms
+[2022-07-26 01:58:52.358 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7148/api/auth/login application/json 53
+[2022-07-26 01:58:52.374 +05:30  INF]  CORS policy execution successful.
+[2022-07-26 01:58:53.032 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.AuthController.Login (GameInventoryManagement)'
+[2022-07-26 01:58:53.066 +05:30  INF]  Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(GameInventoryManagement.Models.Login) on controller GameInventoryManagement.Controllers.AuthController (GameInventoryManagement).
+[2022-07-26 01:58:53.719 +05:30  INF]  Verfing
+[2022-07-26 01:58:54.937 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-26 01:58:55.786 +05:30  INF]  Executed DbCommand (53ms) [Parameters=[@__user_Email_0='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id`, `u`.`email`, `u`.`isadmin`, `u`.`name`, `u`.`password`
+FROM `users` AS `u`
+WHERE `u`.`email` = @__user_Email_0
+LIMIT 1
+[2022-07-26 01:58:56.681 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-07-26 01:58:56.714 +05:30  INF]  Executed action GameInventoryManagement.Controllers.AuthController.Login (GameInventoryManagement) in 3632.1597ms
+[2022-07-26 01:58:56.717 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.AuthController.Login (GameInventoryManagement)'
+[2022-07-26 01:58:56.754 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7148/api/auth/login application/json 53 - 200 - application/json;+charset=utf-8 4396.4477ms

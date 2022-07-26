@@ -16,11 +16,13 @@ namespace GameInventoryManagement.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly gamemanagementContext _context;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IConfiguration configuration,gamemanagementContext context)
+        public AuthController(IConfiguration configuration,gamemanagementContext context,ILogger<AuthController> logger)
         {
             _context = context;
             _configuration = configuration;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -42,6 +44,7 @@ namespace GameInventoryManagement.Controllers
         [Route("login")]
         public async Task<ActionResult<string>> Login([FromBody] Login user)
         {
+            _logger.LogInformation("Verfying");
             var dbUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
             if (dbUser != null)
             {
