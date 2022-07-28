@@ -1,0 +1,657 @@
+[2022-07-28 12:25:18.876 +05:30  INF]  User profile is available. Using 'C:\Users\VC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-07-28 12:25:19.566 +05:30  INF]  Now listening on: https://localhost:7148
+[2022-07-28 12:25:19.566 +05:30  INF]  Now listening on: http://localhost:5148
+[2022-07-28 12:25:19.568 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-07-28 12:25:19.568 +05:30  INF]  Hosting environment: Development
+[2022-07-28 12:25:19.568 +05:30  INF]  Content root path: D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\
+[2022-07-28 12:25:20.122 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger - -
+[2022-07-28 12:25:20.349 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger - - - 301 0 - 235.0542ms
+[2022-07-28 12:25:20.350 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - -
+[2022-07-28 12:25:20.755 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - - - 200 - text/html;charset=utf-8 403.9232ms
+[2022-07-28 12:25:20.820 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/swagger-ui-bundle.js - -
+[2022-07-28 12:25:20.821 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/swagger-ui.css - -
+[2022-07-28 12:25:20.826 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - -
+[2022-07-28 12:25:20.839 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/swagger-ui-standalone-preset.js - -
+[2022-07-28 12:25:20.853 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 27.3233ms
+[2022-07-28 12:25:20.889 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - -
+[2022-07-28 12:25:20.966 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-07-28 12:25:20.966 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-07-28 12:25:20.966 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-07-28 12:25:20.966 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/swagger-ui.css - - - 200 143632 text/css 145.2554ms
+[2022-07-28 12:25:20.966 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 128.9485ms
+[2022-07-28 12:25:20.966 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 145.9032ms
+[2022-07-28 12:25:21.029 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 139.9770ms
+[2022-07-28 12:25:21.340 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - -
+[2022-07-28 12:25:21.468 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/favicon-32x32.png - -
+[2022-07-28 12:25:21.468 +05:30  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-07-28 12:25:21.469 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/favicon-32x32.png - - - 200 628 image/png 0.9649ms
+[2022-07-28 12:25:21.690 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 350.1428ms
+[2022-07-28 12:25:37.362 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:25:37.369 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:25:37.372 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 10.0480ms
+[2022-07-28 12:25:37.376 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:25:37.379 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:25:37.995 +05:30  INF]  Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+[2022-07-28 12:25:38.006 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:25:38.045 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:25:38.060 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 6.0985ms
+[2022-07-28 12:25:38.064 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:25:38.066 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GameInventoryManagement.Services.WeaponService' while attempting to activate 'GameInventoryManagement.Controllers.WeaponController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:25:38.306 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 929.2597ms
+[2022-07-28 12:26:00.776 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:26:00.778 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:26:00.778 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 2.2181ms
+[2022-07-28 12:26:00.797 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:26:00.797 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:26:00.798 +05:30  INF]  Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+[2022-07-28 12:26:00.798 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:26:00.798 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:26:00.799 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 0.5386ms
+[2022-07-28 12:26:00.799 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:26:00.800 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GameInventoryManagement.Services.WeaponService' while attempting to activate 'GameInventoryManagement.Controllers.WeaponController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:26:00.801 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 4.1771ms
+[2022-07-28 12:26:17.482 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:26:17.486 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:26:17.487 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:26:17.487 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 0.4607ms
+[2022-07-28 12:26:17.487 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:26:17.488 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GameInventoryManagement.Services.WeaponService' while attempting to activate 'GameInventoryManagement.Controllers.WeaponController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:26:17.488 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 6.5451ms
+[2022-07-28 12:34:23.629 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:34:51.587 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:34:51.889 +05:30  INF]  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='gamemanagement' AND TABLE_NAME='__EFMigrationsHistory';
+[2022-07-28 12:34:52.043 +05:30  INF]  Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `__EFMigrationsHistory` (
+    `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+    `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
+) CHARACTER SET=utf8mb4;
+[2022-07-28 12:34:52.049 +05:30  INF]  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='gamemanagement' AND TABLE_NAME='__EFMigrationsHistory';
+[2022-07-28 12:34:52.055 +05:30  INF]  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+[2022-07-28 12:34:52.066 +05:30  INF]  Applying migration '20220728070423_First Migration'.
+[2022-07-28 12:34:52.105 +05:30  INF]  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER DATABASE CHARACTER SET utf8mb4;
+[2022-07-28 12:34:52.113 +05:30  ERR]  Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `users` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `name` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `isadmin` tinyint NOT NULL,
+    CONSTRAINT `PK_users` PRIMARY KEY (`id`)
+) CHARACTER SET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+[2022-07-28 12:39:00.356 +05:30  INF]  User profile is available. Using 'C:\Users\VC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-07-28 12:39:00.691 +05:30  INF]  Now listening on: https://localhost:7148
+[2022-07-28 12:39:00.691 +05:30  INF]  Now listening on: http://localhost:5148
+[2022-07-28 12:39:00.693 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-07-28 12:39:00.694 +05:30  INF]  Hosting environment: Development
+[2022-07-28 12:39:00.694 +05:30  INF]  Content root path: D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\
+[2022-07-28 12:39:01.042 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - -
+[2022-07-28 12:39:01.433 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - - - 200 - text/html;charset=utf-8 390.9309ms
+[2022-07-28 12:39:01.470 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - -
+[2022-07-28 12:39:01.482 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 11.9399ms
+[2022-07-28 12:39:01.486 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - -
+[2022-07-28 12:39:01.516 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.2642ms
+[2022-07-28 12:39:01.730 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - -
+[2022-07-28 12:39:01.985 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 254.9272ms
+[2022-07-28 12:39:06.449 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:39:06.479 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:39:06.481 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 31.4106ms
+[2022-07-28 12:39:06.486 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:39:06.493 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:39:06.662 +05:30  INF]  Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+[2022-07-28 12:39:06.675 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:39:06.735 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:39:06.760 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 9.5446ms
+[2022-07-28 12:39:06.766 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:39:06.768 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GameInventoryManagement.Services.WeaponService' while attempting to activate 'GameInventoryManagement.Controllers.WeaponController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:39:06.849 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 362.3238ms
+[2022-07-28 12:39:35.087 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/auth/login - -
+[2022-07-28 12:39:35.088 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:39:35.088 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/auth/login - - - 204 - - 1.2451ms
+[2022-07-28 12:39:35.090 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7148/api/auth/login application/json 44
+[2022-07-28 12:39:35.090 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:39:35.091 +05:30  INF]  Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+[2022-07-28 12:39:35.091 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.AuthController.Login (GameInventoryManagement)'
+[2022-07-28 12:39:35.109 +05:30  INF]  Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(GameInventoryManagement.Models.Login) on controller GameInventoryManagement.Controllers.AuthController (GameInventoryManagement).
+[2022-07-28 12:39:35.812 +05:30  INF]  Verfying
+[2022-07-28 12:39:37.568 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:39:39.135 +05:30  INF]  Executed DbCommand (88ms) [Parameters=[@__user_Email_0='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id`, `u`.`email`, `u`.`isadmin`, `u`.`name`, `u`.`password`
+FROM `users` AS `u`
+WHERE `u`.`email` = @__user_Email_0
+LIMIT 1
+[2022-07-28 12:39:40.041 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-07-28 12:39:40.049 +05:30  INF]  Executed action GameInventoryManagement.Controllers.AuthController.Login (GameInventoryManagement) in 4939.5812ms
+[2022-07-28 12:39:40.050 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.AuthController.Login (GameInventoryManagement)'
+[2022-07-28 12:39:40.063 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7148/api/auth/login application/json 44 - 200 - application/json;+charset=utf-8 4973.5969ms
+[2022-07-28 12:39:40.244 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:39:40.244 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:39:40.245 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 0.7587ms
+[2022-07-28 12:39:40.247 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:39:40.247 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:39:40.381 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:39:40.381 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:39:40.383 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 1.1103ms
+[2022-07-28 12:39:40.383 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:39:40.384 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GameInventoryManagement.Services.WeaponService' while attempting to activate 'GameInventoryManagement.Controllers.WeaponController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:39:40.387 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 140.5521ms
+[2022-07-28 12:40:37.014 +05:30  INF]  User profile is available. Using 'C:\Users\VC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-07-28 12:40:37.227 +05:30  INF]  Now listening on: https://localhost:7148
+[2022-07-28 12:40:37.227 +05:30  INF]  Now listening on: http://localhost:5148
+[2022-07-28 12:40:37.229 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-07-28 12:40:37.229 +05:30  INF]  Hosting environment: Development
+[2022-07-28 12:40:37.229 +05:30  INF]  Content root path: D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\
+[2022-07-28 12:40:37.485 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - -
+[2022-07-28 12:40:37.750 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - - - 200 - text/html;charset=utf-8 268.9657ms
+[2022-07-28 12:40:37.783 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - -
+[2022-07-28 12:40:37.789 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 6.1574ms
+[2022-07-28 12:40:37.804 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - -
+[2022-07-28 12:40:37.869 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.8279ms
+[2022-07-28 12:40:38.005 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - -
+[2022-07-28 12:40:38.176 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.5884ms
+[2022-07-28 12:40:41.512 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:40:41.522 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:41.524 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 11.3971ms
+[2022-07-28 12:40:41.525 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:40:41.529 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:41.889 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:40:41.920 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:40:42.880 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:40:43.299 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[GameInventoryManagement.Models.Weapon, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[GameInventoryManagement.Services.WeaponService+<GetAllWeapons>d__4, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:40:43.359 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 1425.4595ms
+[2022-07-28 12:40:43.362 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:40:43.364 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:40:43.469 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 1944.0493ms
+[2022-07-28 12:40:43.545 +05:30  ERR]  Failed executing DbCommand (405ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id`, `w`.`name`, `w`.`price`
+FROM `weapons` AS `w`
+[2022-07-28 12:40:43.693 +05:30  ERR]  An exception occurred while iterating over the results of a query for context type 'GameInventoryManagement.Models.gamemanagementContext'.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MySqlConnection'.
+   at MySqlConnector.MySqlConnection.VerifyNotDisposed() in /_/src/MySqlConnector/MySqlConnection.cs:line 980
+   at MySqlConnector.MySqlConnection.get_Session() in /_/src/MySqlConnector/MySqlConnection.cs:line 734
+   at MySqlConnector.Core.ICancellableCommandExtensions.ResetCommandTimeout(ICancellableCommand command) in /_/src/MySqlConnector/Core/ICancellableCommand.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 328
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 323
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MySqlConnection'.
+   at MySqlConnector.MySqlConnection.VerifyNotDisposed() in /_/src/MySqlConnector/MySqlConnection.cs:line 980
+   at MySqlConnector.MySqlConnection.get_Session() in /_/src/MySqlConnector/MySqlConnection.cs:line 734
+   at MySqlConnector.Core.ICancellableCommandExtensions.ResetCommandTimeout(ICancellableCommand command) in /_/src/MySqlConnector/Core/ICancellableCommand.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 328
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 323
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2022-07-28 12:40:48.172 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/User/getUsers - -
+[2022-07-28 12:40:48.173 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:48.174 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/User/getUsers - - - 204 - - 2.3481ms
+[2022-07-28 12:40:48.176 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/User/getUsers - -
+[2022-07-28 12:40:48.179 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:48.180 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.UserController.GetAllUsers (GameInventoryManagement)'
+[2022-07-28 12:40:48.184 +05:30  INF]  Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.User]]] GetAllUsers() on controller GameInventoryManagement.Controllers.UserController (GameInventoryManagement).
+[2022-07-28 12:40:48.187 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:40:48.299 +05:30  INF]  Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id`, `u`.`email`, `u`.`isadmin`, `u`.`name`, `u`.`password`
+FROM `users` AS `u`
+[2022-07-28 12:40:48.477 +05:30  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameInventoryManagement.Models.User, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:40:48.485 +05:30  INF]  Executed action GameInventoryManagement.Controllers.UserController.GetAllUsers (GameInventoryManagement) in 301.1866ms
+[2022-07-28 12:40:48.489 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.UserController.GetAllUsers (GameInventoryManagement)'
+[2022-07-28 12:40:48.495 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/User/getUsers - - - 200 - application/json;+charset=utf-8 318.4370ms
+[2022-07-28 12:40:49.896 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/User/myWeapons/7 - -
+[2022-07-28 12:40:49.896 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:49.897 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/User/myWeapons/7 - - - 204 - - 0.3914ms
+[2022-07-28 12:40:49.899 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/User/myWeapons/7 - -
+[2022-07-28 12:40:49.899 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:49.905 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.UserController.GetAllDetails (GameInventoryManagement)'
+[2022-07-28 12:40:49.925 +05:30  INF]  Route matched with {action = "GetAllDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAllDetails(Int32) on controller GameInventoryManagement.Controllers.UserController (GameInventoryManagement).
+[2022-07-28 12:40:50.014 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:40:50.022 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.Linq.IQueryable`1[[<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+[2022-07-28 12:40:50.488 +05:30  INF]  Executed DbCommand (33ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id` AS `Id`, `w`.`name` AS `Name`, `w`.`price` AS `Price`
+FROM `weapons` AS `w`
+INNER JOIN `inventory_table` AS `i` ON `w`.`id` = `i`.`WeaponId`
+INNER JOIN `users` AS `u` ON `i`.`UserId` = `u`.`id`
+WHERE `u`.`id` = @__id_0
+[2022-07-28 12:40:50.496 +05:30  INF]  Executed action GameInventoryManagement.Controllers.UserController.GetAllDetails (GameInventoryManagement) in 570.4669ms
+[2022-07-28 12:40:50.496 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.UserController.GetAllDetails (GameInventoryManagement)'
+[2022-07-28 12:40:50.496 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/User/myWeapons/7 - - - 200 - application/json;+charset=utf-8 597.1969ms
+[2022-07-28 12:40:52.561 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:40:52.562 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:52.562 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 0.4989ms
+[2022-07-28 12:40:52.566 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:40:52.566 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:40:52.567 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:40:52.568 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:40:52.569 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:40:52.577 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[GameInventoryManagement.Models.Weapon, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[GameInventoryManagement.Services.WeaponService+<GetAllWeapons>d__4, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:40:52.579 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 10.3453ms
+[2022-07-28 12:40:52.579 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:40:52.580 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:40:52.596 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 30.6455ms
+[2022-07-28 12:40:52.597 +05:30  INF]  Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id`, `w`.`name`, `w`.`price`
+FROM `weapons` AS `w`
+[2022-07-28 12:40:52.601 +05:30  ERR]  An exception occurred while iterating over the results of a query for context type 'GameInventoryManagement.Models.gamemanagementContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'gamemanagementContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'gamemanagementContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2022-07-28 12:41:57.416 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/add - -
+[2022-07-28 12:41:57.416 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:41:57.417 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/add - - - 204 - - 0.8852ms
+[2022-07-28 12:41:57.425 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7148/api/Weapon/add application/json 30
+[2022-07-28 12:41:57.427 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:41:57.433 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.Add (GameInventoryManagement)'
+[2022-07-28 12:41:57.440 +05:30  INF]  Route matched with {action = "Add", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GameInventoryManagement.Models.Weapon]] Add(GameInventoryManagement.Models.Weapon) on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:41:57.502 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:41:57.633 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[GameInventoryManagement.Services.WeaponService+<AddWeapon>d__3, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:41:57.635 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.Add (GameInventoryManagement) in 195.5653ms
+[2022-07-28 12:41:57.636 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.Add (GameInventoryManagement)'
+[2022-07-28 12:41:57.637 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:41:57.639 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7148/api/Weapon/add application/json 30 - 500 - text/plain;+charset=utf-8 214.7318ms
+[2022-07-28 12:42:01.541 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:42:01.541 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:01.541 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 0.6403ms
+[2022-07-28 12:42:01.543 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:42:01.544 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:01.544 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:42:01.544 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:42:01.546 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:42:01.553 +05:30  INF]  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id`, `w`.`name`, `w`.`price`
+FROM `weapons` AS `w`
+[2022-07-28 12:42:01.552 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[GameInventoryManagement.Models.Weapon, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[GameInventoryManagement.Services.WeaponService+<GetAllWeapons>d__4, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:42:01.557 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 12.6654ms
+[2022-07-28 12:42:01.558 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:42:01.559 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:42:01.563 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 19.7063ms
+[2022-07-28 12:42:05.199 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/User/getUsers - -
+[2022-07-28 12:42:05.199 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:05.199 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/User/getUsers - - - 204 - - 0.5455ms
+[2022-07-28 12:42:05.203 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/User/getUsers - -
+[2022-07-28 12:42:05.203 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:05.203 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.UserController.GetAllUsers (GameInventoryManagement)'
+[2022-07-28 12:42:05.204 +05:30  INF]  Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.User]]] GetAllUsers() on controller GameInventoryManagement.Controllers.UserController (GameInventoryManagement).
+[2022-07-28 12:42:05.204 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:42:05.207 +05:30  INF]  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id`, `u`.`email`, `u`.`isadmin`, `u`.`name`, `u`.`password`
+FROM `users` AS `u`
+[2022-07-28 12:42:05.208 +05:30  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameInventoryManagement.Models.User, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:42:05.208 +05:30  INF]  Executed action GameInventoryManagement.Controllers.UserController.GetAllUsers (GameInventoryManagement) in 4.5571ms
+[2022-07-28 12:42:05.208 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.UserController.GetAllUsers (GameInventoryManagement)'
+[2022-07-28 12:42:05.208 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/User/getUsers - - - 200 - application/json;+charset=utf-8 5.3197ms
+[2022-07-28 12:42:06.707 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/User/myWeapons/7 - -
+[2022-07-28 12:42:06.707 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:06.707 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/User/myWeapons/7 - - - 204 - - 0.3935ms
+[2022-07-28 12:42:06.712 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/User/myWeapons/7 - -
+[2022-07-28 12:42:06.712 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:06.713 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.UserController.GetAllDetails (GameInventoryManagement)'
+[2022-07-28 12:42:06.713 +05:30  INF]  Route matched with {action = "GetAllDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAllDetails(Int32) on controller GameInventoryManagement.Controllers.UserController (GameInventoryManagement).
+[2022-07-28 12:42:06.714 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:42:06.714 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.Linq.IQueryable`1[[<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+[2022-07-28 12:42:06.720 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id` AS `Id`, `w`.`name` AS `Name`, `w`.`price` AS `Price`
+FROM `weapons` AS `w`
+INNER JOIN `inventory_table` AS `i` ON `w`.`id` = `i`.`WeaponId`
+INNER JOIN `users` AS `u` ON `i`.`UserId` = `u`.`id`
+WHERE `u`.`id` = @__id_0
+[2022-07-28 12:42:06.721 +05:30  INF]  Executed action GameInventoryManagement.Controllers.UserController.GetAllDetails (GameInventoryManagement) in 7.9161ms
+[2022-07-28 12:42:06.721 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.UserController.GetAllDetails (GameInventoryManagement)'
+[2022-07-28 12:42:06.721 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/User/myWeapons/7 - - - 200 - application/json;+charset=utf-8 8.9764ms
+[2022-07-28 12:42:09.067 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:42:09.075 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:09.082 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 12.2562ms
+[2022-07-28 12:42:09.083 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:42:09.083 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:42:09.083 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:42:09.083 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:42:09.084 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:42:09.086 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[GameInventoryManagement.Models.Weapon, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[GameInventoryManagement.Services.WeaponService+<GetAllWeapons>d__4, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:42:09.086 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id`, `w`.`name`, `w`.`price`
+FROM `weapons` AS `w`
+[2022-07-28 12:42:09.087 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 4.1969ms
+[2022-07-28 12:42:09.088 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:42:09.088 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:42:09.092 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 9.5362ms
+[2022-07-28 12:42:24.372 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:42:24.372 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:42:24.372 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:42:24.372 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:42:24.374 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id`, `w`.`name`, `w`.`price`
+FROM `weapons` AS `w`
+[2022-07-28 12:42:24.376 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[GameInventoryManagement.Models.Weapon, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[GameInventoryManagement.Services.WeaponService+<GetAllWeapons>d__4, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:42:24.379 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 6.7631ms
+[2022-07-28 12:42:24.380 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:42:24.381 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-07-28 12:42:24.382 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 500 - text/plain;+charset=utf-8 10.4857ms
+[2022-07-28 12:55:10.702 +05:30  INF]  User profile is available. Using 'C:\Users\VC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-07-28 12:55:11.048 +05:30  INF]  Now listening on: https://localhost:7148
+[2022-07-28 12:55:11.048 +05:30  INF]  Now listening on: http://localhost:5148
+[2022-07-28 12:55:11.051 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-07-28 12:55:11.051 +05:30  INF]  Hosting environment: Development
+[2022-07-28 12:55:11.051 +05:30  INF]  Content root path: D:\DotNetTraining\GameInventoryManagement\GameInventoryManagement\
+[2022-07-28 12:55:11.602 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - -
+[2022-07-28 12:55:11.873 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - - - 200 - text/html;charset=utf-8 272.1158ms
+[2022-07-28 12:55:11.910 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - -
+[2022-07-28 12:55:11.918 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 7.2199ms
+[2022-07-28 12:55:11.929 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - -
+[2022-07-28 12:55:11.956 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.9250ms
+[2022-07-28 12:55:12.077 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - -
+[2022-07-28 12:55:12.252 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 174.5189ms
+[2022-07-28 12:55:19.848 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:55:19.857 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:55:19.858 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7148/api/Weapon/weapons - - - 204 - - 10.5832ms
+[2022-07-28 12:55:19.860 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7148/api/Weapon/weapons - -
+[2022-07-28 12:55:19.862 +05:30  INF]  CORS policy execution successful.
+[2022-07-28 12:55:20.385 +05:30  INF]  Executing endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:55:20.405 +05:30  INF]  Route matched with {action = "GetAll", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[GameInventoryManagement.Models.Weapon]]] GetAll() on controller GameInventoryManagement.Controllers.WeaponController (GameInventoryManagement).
+[2022-07-28 12:55:22.397 +05:30  INF]  Entity Framework Core 6.0.7 initialized 'gamemanagementContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: ServerVersion 8.0.28-mysql 
+[2022-07-28 12:55:23.386 +05:30  INF]  Executed DbCommand (104ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `w`.`id`, `w`.`name`, `w`.`price`
+FROM `weapons` AS `w`
+[2022-07-28 12:55:23.595 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GameInventoryManagement.Models.Weapon, GameInventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-07-28 12:55:23.613 +05:30  INF]  Executed action GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement) in 3198.892ms
+[2022-07-28 12:55:23.617 +05:30  INF]  Executed endpoint 'GameInventoryManagement.Controllers.WeaponController.GetAll (GameInventoryManagement)'
+[2022-07-28 12:55:23.635 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7148/api/Weapon/weapons - - - 200 - application/json;+charset=utf-8 3775.1211ms

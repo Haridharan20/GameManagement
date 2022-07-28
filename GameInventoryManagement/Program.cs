@@ -1,5 +1,6 @@
 using System.Text;
 using GameInventoryManagement.Models;
+using GameInventoryManagement.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -8,6 +9,7 @@ using Serilog;
 using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<WeaponService>();
 var connectionString = "server=localhost;port=3306;user=root;password=root@123;database=gamemanagement";
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
 

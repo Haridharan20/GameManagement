@@ -128,3 +128,12 @@ D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\obj\Debug\
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\obj\Debug\net6.0\GameInventoryManagementTest.pdb
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\obj\Debug\net6.0\GameInventoryManagementTest.genruntimeconfig.cache
 D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\obj\Debug\net6.0\ref\GameInventoryManagementTest.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\DotNetTraining\GameInventoryManagement\GameInventoryManagementTest\bin\Debug\net6.0\Serilog.Sinks.File.dll

@@ -24,7 +24,7 @@ namespace GameInventoryManagement.Services
             return new { message = "Weapon Created Successfully" };
         }
 
-        public virtual async Task<List<Weapon>> GetAllWeapons()
+        public virtual async Task<object> GetAllWeapons()
         {
 
             return await _context.Weapons.ToListAsync();

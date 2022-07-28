@@ -31,7 +31,7 @@ namespace GameInventoryManagement.Controllers
         public async Task<ActionResult<List<Weapon>>> GetAll()
         {
 
-            return Ok(_weaponService.GetAllWeapons());
+            return Ok(await _weaponService.GetAllWeapons());
         }
 
         [HttpGet]
